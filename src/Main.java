@@ -6,37 +6,34 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
 
-
         while (true) {
             printMenu();
-            int numberOfMenu = scanner.nextInt();
+            int menuNumber = scanner.nextInt();
 
-            if (numberOfMenu == 1) {
+            if (menuNumber == 1) {
                 System.out.println("За какой месяц ввести количество шагов? ");
-                int mouthNumber = scanner.nextInt();
+                int mounthNumber = scanner.nextInt();
                 System.out.println("За какой день ввести количество шагов? ");
                 int dayNumber = scanner.nextInt();
                 System.out.println("Сколько шагов? ");
-                int numberOfSteps = scanner.nextInt();
-                stepTracker.monthToData[mouthNumber].setDays(dayNumber, numberOfSteps);
+                int StepsNumber = scanner.nextInt();
+                stepTracker.monthToData[mounthNumber].setDays(dayNumber, StepsNumber);
 
-            } else if (numberOfMenu == 2) {
+            } else if (menuNumber == 2) {
                 System.out.println("За какой месяц напечатать статистику? ");
                 int mouthNumber = scanner.nextInt();
-                stepTracker.printAllstatistics(mouthNumber);
+                stepTracker.printAllStatistics(mouthNumber);
 
-            } else if (numberOfMenu == 3) {
+            } else if (menuNumber == 3) {
                 System.out.println("Введите новую цель по количеству шагов в день.");
-                int purposOfSteps = scanner.nextInt();
-                stepTracker.setPurposOfSteps(purposOfSteps);
+                int StepsPurpos = scanner.nextInt();
+                stepTracker.setPurposeSteps(StepsPurpos);
 
-            } else if (numberOfMenu == 4) {
+            } else if (menuNumber == 4) {
                 break;
 
             } else
                 System.out.println("Такой команды нет.");
-
-
         }
     }
 
